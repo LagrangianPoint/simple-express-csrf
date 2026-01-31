@@ -1,9 +1,5 @@
 # simple-express-csrf
 
-[![NPM Version][npm-version-image]][npm-url]
-[![NPM Downloads][npm-downloads-image]][npm-url]
-[![Node.js Version][node-image]][node-url]
-
 A really simple Express.js CSRF Middleware that just works out of the box.
 
 Are you tired of importing and testing multiple CSRF libraries into Express.js, and
