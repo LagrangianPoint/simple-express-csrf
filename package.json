@@ -1,0 +1,38 @@
+{
+  "name": "simple-express-csrf",
+  "version": "0.1.6",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "description": "A really simple Express.js CSRF Middleware that just works out of the box.",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "test": "mocha --trace-deprecation --reporter spec --bail --check-leaks test/"
+  },
+  "repository": "LagrangianPoint/simple-express-csrf",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "express",
+    "csrf",
+    "tokens",
+    "middleware",
+    "express-session",
+    "typescript"
+  ],
+  "author": "LagrangianPoint",
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "csrf": "^3.1.0",
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "typescript": "^5.9.3"
+  }
+}
