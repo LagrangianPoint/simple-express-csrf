@@ -1,6 +1,6 @@
 {
   "name": "simple-express-csrf",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -10,7 +10,10 @@
     "lint": "eslint .",
     "test": "mocha --trace-deprecation --reporter spec --bail --check-leaks test/"
   },
-  "repository": "LagrangianPoint/simple-express-csrf",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LagrangianPoint/simple-express-csrf.git"
+  },
   "files": [
     "dist",
     "package.json",
