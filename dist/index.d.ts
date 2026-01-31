@@ -1,5 +1,6 @@
 import type { Request, Response, NextFunction } from "express";
-export declare const generate_csrf_token: (request: Request) => string;
-export declare const validate_csrf_token: (request: Request) => boolean;
-export declare const validateCSRFMiddleware: (onErrorCallback: Function) => (req: Request, res: Response, next: NextFunction) => any;
+export declare const generateCSRFToken: (request: Request) => string;
+export declare const validateCSRFToken: (request: Request) => boolean;
+export type CSRFErrorCallback = (err: Error, req: Request, res: Response) => void;
+export declare const validateCSRFMiddleware: (onErrorCallback?: CSRFErrorCallback) => (req: Request, res: Response, next: NextFunction) => void | Response<any, Record<string, any>>;
 //# sourceMappingURL=index.d.ts.map

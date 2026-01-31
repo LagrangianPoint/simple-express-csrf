@@ -34,27 +34,27 @@ information for TypeScript projects.
 
 From javascript, you can import this with:
 ```js
-const { generate_csrf_token, validateCSRFMiddleware } = require("simple-express-csrf");
+const { generateCSRFToken, validateCSRFMiddleware } = require("simple-express-csrf");
 
 // Or
 
-import  { generate_csrf_token, generate_csrf_tokenvalidateCSRFMiddleware } from "simple-express-csrf";
+import  { generateCSRFToken, generateCSRFToken, validateCSRFMiddleware } from "simple-express-csrf";
 ```
 
 From TypeScript, you simply import the middleware like:
 ```ts
-import  { generate_csrf_token, generate_csrf_tokenvalidateCSRFMiddleware } from "simple-express-csrf";
+import  { generateCSRFToken, generateCSRFToken, validateCSRFMiddleware } from "simple-express-csrf";
 ```
 
 
 ## API
 
-### generate_csrf_token(request: Request)
+### generateCSRFToken(request: Request)
 Generates a new CSRF Token, which can be used to be renderd in your form.
 It needs the `request` object as an input to use it to save this token and the secret token in the session.
 
 
-### validate_csrf_token(request: Request)
+### validateCSRFToken(request: Request)
 Reads the `csrf_token` parameter from your `POST` request (the only method secured is `POST`), and verifies it against the secret token in session.
 
 
@@ -75,7 +75,7 @@ const express = require("express");
 
 const session = require('express-session');
 
-const { generate_csrf_token, validateCSRFMiddleware } = require("simple-express-csrf")
+const { generateCSRFToken, validateCSRFMiddleware } = require("simple-express-csrf")
 
 const app = express();
 
@@ -92,7 +92,7 @@ app.use(session({
 }));
 
 app.get("/", (req, res) => {
-  res.render('index', { csrf_token: generate_csrf_token(req) });
+  res.render('index', { csrf_token: generateCSRFToken(req) });
 });
 
 
@@ -101,8 +101,7 @@ app.post("/",
       return res.redirect("/404");
     }),
   (req, res) => {
-  const response = validate_csrf_token(req);
-  res.json({"token-is": response});
+  res.json({"success": true});
 });
 ```
 

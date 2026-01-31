@@ -1,6 +1,6 @@
 {
   "name": "simple-express-csrf",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -36,7 +36,20 @@
     "express-session": "^1.19.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/node": "^25.1.0",
-    "typescript": "^5.9.3"
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "chai": "^6.2.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.2.0",
+    "mocha": "^11.7.5",
+    "mock-req-res": "^1.2.1",
+    "prettier": "^3.8.1",
+    "sinon": "^21.0.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0"
   }
 }
