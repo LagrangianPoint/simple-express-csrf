@@ -38,12 +38,12 @@ const { generateCSRFToken, validateCSRFMiddleware } = require("simple-express-cs
 
 // Or
 
-import  { generateCSRFToken, generateCSRFToken, validateCSRFMiddleware } from "simple-express-csrf";
+import  { generateCSRFToken, validateCSRFMiddleware } from "simple-express-csrf";
 ```
 
 From TypeScript, you simply import the middleware like:
 ```ts
-import  { generateCSRFToken, generateCSRFToken, validateCSRFMiddleware } from "simple-express-csrf";
+import  { generateCSRFToken, validateCSRFMiddleware } from "simple-express-csrf";
 ```
 
 
